@@ -15,15 +15,21 @@
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td>{{ loop.index }}.</td>
-===>            <td>{{ entity.name }}</td>
-===>            <td>
-                <a href="{{ path('admin_pupil_show', { 'id': entity.id }) }}">
-===>                    {{ entity.surname }}
-===>                </a>
-===>            </td>
+                    <td>{{ loop.index }}.</td>
+                    <td>{{ entity.name }}</td>
+                    <td>
+                        <a href="{{ path('admin_pupil_show', { 'id': entity.id }) }}">
+                            {{ entity.surname }}
+                        </a>
+                    </td>
                 <td>
                 <ul>
+                    <li>
+                        <a href="{{ path('admin_pupil_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('admin_pupil_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
                 </ul>
                 </td>
             </tr>
